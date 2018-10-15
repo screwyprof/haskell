@@ -1,0 +1,2 @@
+# haskell
+A Haskell playground
