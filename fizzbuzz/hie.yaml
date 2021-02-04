@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "fizzbuzz:lib"
+
+    - path: "./test"
+      component: "fizzbuzz:test:fizzbuzz-test"

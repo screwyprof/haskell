@@ -1,0 +1,23 @@
+name:                fizzbuzz
+version:             0.1.0
+github:              "srewyprof/fizzbuzz"
+license:             MIT
+author:              "Happy Gopher"
+maintainer:          "max@happygopher.nl"
+copyright:           "2021 Happy Gopher"
+
+ghc-options: -Wall
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  fizzbuzz-test:
+    main:                Spec.hs
+    source-dirs:         test  
+    dependencies: 
+      - fizzbuzz
+      - hspec

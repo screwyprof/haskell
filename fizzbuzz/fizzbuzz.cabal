@@ -1,0 +1,47 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.3.
+--
+-- see: https://github.com/sol/hpack
+
+name:           fizzbuzz
+version:        0.1.0
+homepage:       https://github.com/srewyprof/fizzbuzz#readme
+bug-reports:    https://github.com/srewyprof/fizzbuzz/issues
+author:         Happy Gopher
+maintainer:     max@happygopher.nl
+copyright:      2021 Happy Gopher
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/srewyprof/fizzbuzz
+
+library
+  exposed-modules:
+      FizzBuzz
+  other-modules:
+      Paths_fizzbuzz
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite fizzbuzz-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      FizzBuzzSpec
+      Paths_fizzbuzz
+  hs-source-dirs:
+      test
+  ghc-options: -Wall
+  build-depends:
+      base >=4.7 && <5
+    , fizzbuzz
+    , hspec
+  default-language: Haskell2010
